@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:8080";
+const BASE_URL = "http://localhost:8080"
 
 export async function getMembers() {
   const response = await fetch(`${BASE_URL}/members`)
@@ -9,7 +9,7 @@ export async function getMembers() {
 }
 
 export async function getMemberbyId(id) {
-  const response = await fetch(`${BASE_URL}/members/${id}`);
+  const response = await fetch(`${BASE_URL}/members/${id}`)
   if (!response.ok) {
     throw new Error("Failed to fetch member")
   }
@@ -38,7 +38,7 @@ export async function updateMember(id, member) {
     body: JSON.stringify(member),
   })
   if (!response.ok) {
-    throw new Error("Failed to update member");
+    throw new Error("Failed to update member")
   }
   return await response.json()
 }
@@ -46,7 +46,7 @@ export async function updateMember(id, member) {
 export async function deleteMember(id) {
   const response = await fetch(`${BASE_URL}/members/${id}`, {
     method: "DELETE",
-  });
+  })
   if (!response.ok) {
     throw new Error("Failed to delete member")
   }

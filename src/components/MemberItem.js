@@ -10,13 +10,14 @@ const MemberItem = () =>{
   const navigate = useNavigate()
 
   useEffect(() => {
+    if (member.id) return
     // Fetch member by ID
     getMemberbyId(id)
       .then((data) => {
         setMember(data)
       })
-      .catch((error) => console.error("Error fetching member:", error));
-  }, [id])
+      .catch((error) => console.error('Error fetching member:', error))
+  }, [id, member.id])
 
 
   return (
