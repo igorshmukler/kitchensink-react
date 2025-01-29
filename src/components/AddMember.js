@@ -11,7 +11,7 @@ const AddMember = () => {
   const navigate = useNavigate()
 
   const handleSubmit = (event) => {
-    event.preventDefault();
+    event.preventDefault()
 
     const newMember = { firstName, lastName, email };
 

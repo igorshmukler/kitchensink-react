@@ -4,13 +4,13 @@ import { getMembers } from '../api/memberApi'
 import '../styles/MemberList.css'
 
 const MemberList = () => {
-  const [members, setMembers] = useState([]);
+  const [members, setMembers] = useState([])
 
   useEffect(() => {
     getMembers()
       .then(setMembers)
-      .catch((error) => console.error("Error fetching members:", error));
-  }, []);
+      .catch((error) => console.error("Error fetching members:", error))
+  }, [])
 
   return (
     <div className="member-list-container">
